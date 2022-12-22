@@ -1,0 +1,60 @@
+:root {
+    --scale: 1.2;
+    --left: 30%;
+    --top: 60%
+  }
+#mapBox {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    position: relative;
+}
+#sefton {
+    float: left;
+    scale: var(--scale);
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    z-index: 2;
+}
+#liverpool {
+    float:left;
+    scale: var(--scale);
+    position: relative;
+    left: 40%; /* Was 30% */
+    top: 50%; /* Was 60% */
+    z-index: 2;
+}
+#knowsley {
+    float: left;
+    scale: var(--scale);
+    position: absolute;
+    left: 50%;
+    top: 44.70%;
+    z-index: 1;
+}
+#sthelens {
+    float:left;
+    scale: var(--scale);
+    position: absolute;
+    left: 61%;
+    top: 40%;
+    z-index: 2;
+}
+#wirral {
+    float:left;
+    scale: var(--scale);
+    position: absolute;
+    left: 18%;
+    top: 60%;
+    z-index: 2;
+}
+#sefton:hover, #liverpool:hover, #knowsley:hover, #sthelens:hover, #wirral:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.50);
+    filter: drop-shadow(4px 4px 4px #000);
+    z-index: 3;
+}
