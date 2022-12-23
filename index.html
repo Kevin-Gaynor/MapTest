@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Css/styles.css">
+
     </head>
     <body>
         <div id="mapBox">
@@ -12,7 +13,19 @@
             <img src="Images/liverpool.png" alt="Liverpool" class="mapRegion liverpool" />
             <img src="Images/knowsley.png" alt="Knowsley" class="mapRegion knowsley" />
             <img src="Images/sthelens.png" alt="St. Helens" class="mapRegion sthelens" />
-            <img src="Images/wirral.png" alt="Wirral" class="mapRegion wirral" />
+            <img src="Images/wirral.png" alt="Wirral" id="wirral" class="wirral" />
+            <img src="Images/hotspot.png" alt="Wirral" id="wirralHotspot" class="mapHotspot wirralHotspot" onmouseenter="mouseEnterWirral()" onmouseleave="mouseLeaveWirral()" />
         </div>
     </body>
+
+    <script>
+        function mouseEnterWirral() {
+          document.getElementById("wirral").classList.add("mapRegion");
+          document.getElementById("wirral").classList.add("exploded");
+        }
+        
+        function mouseLeaveWirral() {
+          document.getElementById("wirral").classList.remove("exploded");
+        }
+        </script>   
 </html>
