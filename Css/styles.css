@@ -1,60 +1,83 @@
 :root {
-    --scale: 1.2;
-    --left: 30%;
-    --top: 60%
-  }
+    --scale: .9;
+    --transformScale: 1.2;
+}
 #mapBox {
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 320px;
+    min-height: 320px;
     margin: 0 auto;
     border-style: solid;
     border-width: 1px;
     border-color: #000;
     position: relative;
 }
-#sefton {
+.mapImage {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 320px;
+    min-height: 320px; 
+    z-index: 0;
+}
+.mapRegion {
+    transition: all .2s ease-in-out;
     float: left;
     scale: var(--scale);
     position: absolute;
-    left: 30%;
-    top: 10%;
-    z-index: 2;
 }
-#liverpool {
-    float:left;
-    scale: var(--scale);
-    position: relative;
-    left: 40%; /* Was 30% */
-    top: 50%; /* Was 60% */
-    z-index: 2;
+
+.sefton {
+    left: 18%;
 }
-#knowsley {
-    float: left;
-    scale: var(--scale);
-    position: absolute;
-    left: 50%;
-    top: 44.70%;
+
+.liverpool {
+    left: 31%;
+    top: 48.5%;
+}
+
+.knowsley {
+    left: 41.5%;
+    top: 42.5%;
     z-index: 1;
 }
-#sthelens {
-    float:left;
-    scale: var(--scale);
-    position: absolute;
-    left: 61%;
-    top: 40%;
-    z-index: 2;
+
+.sthelens {
+    left: 52.5%;
+    top: 37%;
 }
-#wirral {
-    float:left;
-    scale: var(--scale);
-    position: absolute;
-    left: 18%;
-    top: 60%;
-    z-index: 2;
+
+.wirral {
+    left: 3.7%;
+    top: 57%;
 }
-#sefton:hover, #liverpool:hover, #knowsley:hover, #sthelens:hover, #wirral:hover {
-    transition: all .2s ease-in-out;
-    transform: scale(1.50);
-    filter: drop-shadow(4px 4px 4px #000);
-    z-index: 3;
+
+    .sefton:hover, .liverpool:hover, .knowsley:hover, .sthelens:hover, .wirral:hover {
+        transition: all .2s ease-in-out;
+        transform: scale(var(--transformScale));
+        filter: drop-shadow(2px 2px 2px #000);
+        z-index: 3;
+    }
+
+.MapImageButton {
+    background-color: transparent;
+}
+
+
+.liverpool:hover {
+    transform: scale(var(--transformScale)) rotate(-56deg);
+    filter: drop-shadow(-2px 2px 2px #000);
+}
+
+.knowsley:hover {
+    transform: scale(var(--transformScale)) rotate(-62deg);
+    filter: drop-shadow(-2px 2px 2px #000);
+}
+
+.sthelens:hover {
+    filter: drop-shadow(-2px 2px 2px #000);
 }
