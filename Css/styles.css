@@ -30,11 +30,14 @@
     scale: var(--scale);
     position: absolute;
 }
-
+.mapHotspot {
+    float: left;
+    position: absolute;
+    opacity: 0;
+}
 .sefton {
     left: 18%;
 }
-
 .liverpool {
     left: 31%;
     top: 48.5%;
@@ -55,18 +58,24 @@
     left: 3.7%;
     top: 57%;
 }
-
-    .sefton:hover, .liverpool:hover, .knowsley:hover, .sthelens:hover, .wirral:hover {
-        transition: all .2s ease-in-out;
-        transform: scale(var(--transformScale));
-        filter: drop-shadow(2px 2px 2px #000);
-        z-index: 3;
-    }
-
-.MapImageButton {
-    background-color: transparent;
+.wirralHotspot {
+    left: 15%;
+    top: 70%;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
 }
 
+.sefton:hover, .liverpool:hover, .knowsley:hover, .sthelens:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(var(--transformScale));
+    filter: drop-shadow(2px 2px 2px #000);
+    z-index: 3;
+}
+
+.sefton:focus, .liverpool:focus, .knowsley:focus, .sthelens:focus, .wirral:focus {
+    background-color: transparent;
+}
 
 .liverpool:hover {
     transform: scale(var(--transformScale)) rotate(-56deg);
@@ -80,4 +89,11 @@
 
 .sthelens:hover {
     filter: drop-shadow(-2px 2px 2px #000);
+}
+
+.exploded {
+    transition: all .2s ease-in-out;
+    transform: scale(var(--transformScale));
+    filter: drop-shadow(2px 2px 2px #000);
+    z-index: 3; 
 }
