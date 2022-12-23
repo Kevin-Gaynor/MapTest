@@ -4,14 +4,21 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Css/styles.css">
+        <script type="text/javascript">
+            function regionClick(ctl) {
+                var ctlRegion = document.getElementById("txtRegion");
+                ctlRegion.value = ctl.id;
+            }
+        </script>
     </head>
     <body>
+        <input type="text" id="txtRegion" width="300">
         <div id="mapBox">
-            <img src="Images/sefton.png" alt="Sefton" id="sefton" />
-            <img src="Images/liverpool.png" alt="Liverpool" id="liverpool" />
-            <img src="Images/knowsley.png" alt="Knowsley" id="knowsley" />
-            <img src="Images/sthelens.png" alt="St. Helens" id="sthelens" />
-            <img src="Images/wirral.png" alt="Wirral" id="wirral" />
+            <img src="Images/sefton.png" alt="Sefton" id="sefton" class="mapRegion sefton" onClick="regionClick(this);") />
+            <img src="Images/liverpool.png" alt="Liverpool" id="liverpool" class="mapRegion liverpool" onClick="regionClick(this);") />
+            <img src="Images/knowsley.png" alt="Knowsley" id="knowsley" class="mapRegion knowsley" onClick="regionClick(this);") />
+            <img src="Images/sthelens.png" alt="St. Helens" id="sthelens" class="mapRegion sthelens" onClick="regionClick(this);") />
+            <img src="Images/wirral.png" alt="Wirral" id="wirral" class="mapRegion wirral" onClick="regionClick(this);") />
         </div>
     </body>
 </html>
